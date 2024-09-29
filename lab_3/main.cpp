@@ -4,7 +4,6 @@
 // Вариант 8
 
 #include <iostream>
-#include <bitset>
 
 using namespace std;
 
@@ -15,7 +14,8 @@ int main() {
     cin >> x;
     cout << "Enter i: ";
     cin >> i;
-    int mask = (-1 << i) | ((1 << (i - 1)) - 1);
+    int mask = ~(1 << (i - 1));
     x = x & mask;
+    cout << x;
     return 0;
 }

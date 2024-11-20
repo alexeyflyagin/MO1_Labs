@@ -14,7 +14,7 @@ int main() {
     cin >> x;
     cout << "Enter i: ";
     cin >> i;
-    int mask = ~(1 << (i - 1));
+    unsigned int mask = ~(1 << (i - 1));
     x = x & mask;
     cout << x;
     return 0;

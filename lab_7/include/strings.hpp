@@ -1,7 +1,5 @@
 #pragma once
 #include <string>
 
-using namespace std;
-
-extern const string ENTER_N;
-extern const string RESULT;
+extern const std::string ENTER_N;
+extern const std::string RESULT;

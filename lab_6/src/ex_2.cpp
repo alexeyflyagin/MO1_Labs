@@ -10,26 +10,24 @@
 #include <set>
 #include <algorithm>
 
-using namespace std;
-
 void ex2()
 {
     int n;
-    cout << ENTER_N;
-    cin >> n;
+    std::cout << ENTER_N;
+    std::cin >> n;
     int c = 0;
-    vector<int> arr;
-    cout << ENTER_SEQUENCE;
+    std::vector<int> arr;
+    std::cout << ENTER_SEQUENCE;
     for (int i = 0; i < n; i++)
     {
         int j;
-        cin >> j;
+        std::cin >> j;
         arr.push_back(j);
     }
     sort(arr.begin(), arr.end(), [](int a, int b)
     {
-        vector<int> aDigits = getDigitsFromNum(a);
-        vector<int> bDigits = getDigitsFromNum(b);
+        std::vector<int> aDigits = getDigitsFromNum(a);
+        std::vector<int> bDigits = getDigitsFromNum(b);
         int aSum = getSum(aDigits);
         int bSum = getSum(bDigits);
         if (aSum == bSum) 
@@ -41,5 +39,5 @@ void ex2()
         }
         return aSum < bSum;
     });
-    cout << fromVectorToString(arr);
+    std::cout << fromVectorToString(arr);
 }

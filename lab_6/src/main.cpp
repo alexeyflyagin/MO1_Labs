@@ -9,8 +9,6 @@
 #include "ex_4.hpp"
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
     system("cls");

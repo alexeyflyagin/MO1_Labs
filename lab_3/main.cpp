@@ -5,17 +5,17 @@
 
 #include <iostream>
 
-using namespace std;
-
 int main() {
     system("cls");
+
     unsigned x, i;
-    cout << "Enter x: ";
-    cin >> x;
-    cout << "Enter i: ";
-    cin >> i;
+    std::cout << "Enter x: ";
+    std::cin >> x;
+    std::cout << "Enter i: ";
+    std::cin >> i;
     unsigned int mask = ~(1 << (i - 1));
     x = x & mask;
-    cout << x;
+    std::cout << x;
+
     return 0;
 }

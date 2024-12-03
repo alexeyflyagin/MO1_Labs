@@ -5,19 +5,17 @@
 
 #include <iostream>
 
-using namespace std;
-
 void ex1() {
     int n;
     int p = 1;
     int max = INT_MIN;
     int maxIndex = 0;
-    cout << "Enter the length of the sequence: ";
-    cin >> n;
+    std::cout << "Enter the length of the sequence: ";
+    std::cin >> n;
     for (int i = 1; i < n; i++) {
         int x;
-        cout << i << ": ";
-        cin >> x;
+        std::cout << i << ": ";
+        std::cin >> x;
         if (x % 5 != 0) {
             p *= x;
             if (x > max) {
@@ -26,27 +24,27 @@ void ex1() {
             }
         }
     }
-    cout << "Product: " << p << "\t" << "max: " << max << " (" << maxIndex << ")" << endl;
+    std::cout << "Product: " << p << "\t" << "max: " << max << " (" << maxIndex << ")" << std::endl;
 }
 
 void ex2() {
     int n;
     int p = 1;
-    cout << "Enter the number: ";
-    cin >> n;
+    std::cout << "Enter the number: ";
+    std::cin >> n;
     while (n != 0) {
         int ns = n % 10;
         if (ns % 2 != 0) p *= ns;
         n /= 10;
     }
-    cout << "Product: " << p << endl;
+    std::cout << "Product: " << p << std::endl;
 }
 
 int main()
 {
     system("cls");
     ex1();
-    cout << endl;
+    std::cout << std::endl;
     ex2();
     return 0;
 }

@@ -8,11 +8,9 @@
 #include <vector>
 #include <numeric>
 
-using namespace std;
-
 int getSumOfDigits(int num)
 {
-    vector<int> a;
+    std::vector<int> a;
     while (num != 0)
     {
         a.push_back(num % 10);

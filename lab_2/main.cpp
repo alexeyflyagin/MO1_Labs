@@ -5,14 +5,14 @@
 
 #include <iostream>
 
-using namespace std;
-
 
 int main() {
     system("cls");
+
     unsigned __int16 a;
-    cin >> a;
+    std::cin >> a;
     a = a * a * a;
-    cout << a;
+    std::cout << a;
+    
     return 0;
 }

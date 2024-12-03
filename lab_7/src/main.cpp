@@ -12,7 +12,6 @@
 #include <algorithm>
 #include <numeric>
 
-using namespace std;
 using namespace MatrixOperations;
 
 int main()
@@ -20,15 +19,15 @@ int main()
     system("cls");
 
     int n;
-    cout << ENTER_N;
-    cin >> n;
+    std::cout << ENTER_N;
+    std::cin >> n;
 
     int** matrix = new int*[n];
     for (int i = 0; i < n; i++) { matrix[i] = new int[n]; }
 
     inputMatrix(matrix, n);
     processMatrix(matrix, n);
-    cout << endl << RESULT << endl;
+    std::cout << std::endl << RESULT << std::endl;
     showMatrix(matrix, n);
 
     for (int column = 0; column < n; column++) { 

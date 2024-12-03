@@ -6,5 +6,5 @@
 #include "strings.hpp"
 #include <string>
 
-const string ENTER_N = "Enter n: ";
-const string RESULT = "Result: ";
+const std::string ENTER_N = "Enter n: ";
+const std::string RESULT = "Result: ";

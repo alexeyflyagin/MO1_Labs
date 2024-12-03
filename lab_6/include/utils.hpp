@@ -2,10 +2,8 @@
 #include <vector>
 #include <string>
 
-using namespace std;
+std::string fromVectorToString(std::vector<int> arr);
 
-string fromVectorToString(vector<int> arr);
+std::vector<int> getDigitsFromNum(int num);
 
-vector<int> getDigitsFromNum(int num);
-
-int getSum(vector<int> arr);
+int getSum(std::vector<int> arr);

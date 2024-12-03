@@ -12,25 +12,23 @@
 #include <set>
 #include <algorithm>
 
-using namespace std;
-
 void ex1()
 {
     int n;
-    cout << ENTER_N;
-    cin >> n;
+    std::cout << ENTER_N;
+    std::cin >> n;
     int c = 0;
-    vector<int> arr;
-    cout << ENTER_SEQUENCE;
+    std::vector<int> arr;
+    std::cout << ENTER_SEQUENCE;
     for (int i = 0; i < n; i++)
     {
         int j;
-        cin >> j;
-        string jString = to_string(j);
-        set<char> jSet(jString.begin(), jString.end());
+        std::cin >> j;
+        std::string jString = std::to_string(j);
+        std::set<char> jSet(jString.begin(), jString.end());
         if (jSet.size() == 1 && jString.size() > 1) c++;
         arr.push_back(j);
     }
-    if (c >= 3) sort(arr.begin(), arr.end(), [](int a, int b) { return a > b; });
-    cout << fromVectorToString(arr);
+    if (c >= 3) std::sort(arr.begin(), arr.end(), [](int a, int b) { return a > b; });
+    std::cout << fromVectorToString(arr);
 }

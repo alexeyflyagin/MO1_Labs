@@ -5,18 +5,16 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 void ex4() {
     int n;
-    cout << ENTER_N;
-    cin >> n;
+    std::cout << ENTER_N;
+    std::cin >> n;
 
-    vector<int> arr;
-    cout << ENTER_SEQUENCE;
+    std::vector<int> arr;
+    std::cout << ENTER_SEQUENCE;
     for (int j = 0; j < n; j++) {
         int i;
-        cin >> i;
+        std::cin >> i;
         arr.push_back(i);
     }
     
@@ -44,8 +42,8 @@ void ex4() {
         }
     }
 
-    cout << RESULT;
+    std::cout << RESULT;
     for (int j = 0; j < arr.size(); j++) {
-        cout << arr[j] << " ";
+        std::cout << arr[j] << " ";
     }
 }

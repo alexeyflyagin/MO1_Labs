@@ -8,22 +8,20 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 void ex3() {
     int n, m;
-    cout << ENTER_N;
-    cin >> n;
-    cout << ENTER_M;
-    cin >> m;
+    std::cout << ENTER_N;
+    std::cin >> n;
+    std::cout << ENTER_M;
+    std::cin >> m;
 
     int** arr = new int*[n]; // I use regular arrays, not vectors :)
     for (char i = 0; i < n; i++) { arr[i] = new int[m]; }
 
-    cout << ENTER_EACH_CELL << endl;
+    std::cout << ENTER_EACH_CELL << std::endl;
     for (char i = 0; i < n; i++) {
         for (char j = 0; j < m; j++) { 
-            cin >> arr[i][j]; 
+            std::cin >> arr[i][j]; 
         }
     }
 
@@ -40,12 +38,12 @@ void ex3() {
         arr[i][maxProductColumnIndex] -= 3;
     }
 
-    cout << endl << RESULT << endl;
+    std::cout << std::endl << RESULT << std::endl;
     for (char i = 0; i < n; i++) {
         for (char j = 0; j < m; j++) { 
-            cout << arr[i][j] << " ";
+            std::cout << arr[i][j] << " ";
         }
-        cout << endl;
+        std::cout << std::endl;
     }
 
     for (int i = 0; i < n; i++) { 

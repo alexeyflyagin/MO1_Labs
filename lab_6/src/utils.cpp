@@ -5,29 +5,29 @@
 
 #include "utils.hpp"
 #include <algorithm>
+#include <vector>
+#include <string>
 
-using namespace std;
-
-string fromVectorToString(vector<int> arr)
+std::string fromVectorToString(std::vector<int> arr)
 {
-    string r;
-    for (auto element : arr) { r += to_string(element) + " "; }
+    std::string r;
+    for (auto element : arr) { r += std::to_string(element) + " "; }
     return r;
 }
 
-vector<int> getDigitsFromNum(int num)
+std::vector<int> getDigitsFromNum(int num)
 {
-    vector<int> a;
+    std::vector<int> a;
     while (num != 0)
     {
         a.push_back(num % 10);
         num /= 10;
     }
-    reverse(a.begin(), a.end());
+    std::reverse(a.begin(), a.end());
     return a;
 }
 
-int getSum(vector<int> arr)
+int getSum(std::vector<int> arr)
 {
     int r = 0;
     for (int i : arr) { r += i; }

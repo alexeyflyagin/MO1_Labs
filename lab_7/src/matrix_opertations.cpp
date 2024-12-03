@@ -9,8 +9,6 @@
 #include <numeric>
 #include <algorithm>
 
-using namespace std;
-
 namespace MatrixOperations {
 
     // I would create a Matrix class, but we have to use functions, not methods...
@@ -19,7 +17,7 @@ namespace MatrixOperations {
         for (int row = 0; row < size; row++) {
             for (int column = 0; column < size; column++) {
                 int value;
-                cin >> value;
+                std::cin >> value;
                 matrix[column][row] = value;
             }
         }
@@ -43,9 +41,9 @@ namespace MatrixOperations {
         int min_sum = getSumOfDigits(minAndMaxOfMatrix.min());
         int max_sum = getSumOfDigits(minAndMaxOfMatrix.max());
         if (abs(min_sum - max_sum) > 2) return;
-        sort(matrix, matrix + size, [size](int* f_column, int* s_column) {
-            int f_column_sum = accumulate(f_column, f_column + size, 0);
-            int s_column_sum = accumulate(s_column, s_column + size, 0);
+        std::sort(matrix, matrix + size, [size](int* f_column, int* s_column) {
+            int f_column_sum = std::accumulate(f_column, f_column + size, 0);
+            int s_column_sum = std::accumulate(s_column, s_column + size, 0);
             return f_column_sum < s_column_sum;
         });
     }
@@ -53,9 +51,9 @@ namespace MatrixOperations {
     void showMatrix(int** matrix, int size) {
         for (int row = 0; row < size; row++) {
             for (int column = 0; column < size; column++) {
-                cout << matrix[column][row] << " ";
+                std::cout << matrix[column][row] << " ";
             }
-            cout << endl;
+            std::cout << std::endl;
         }
     }
 }
